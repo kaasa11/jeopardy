@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220">
+  <g stroke="#14241C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- lue -->
+    <path d="M42 92 C52 40 100 14 150 30 C170 36 178 58 176 70 L160 92 Z" fill="#D7263D"/>
+    <circle cx="176" cy="72" r="15" fill="#fff"/>
+    <!-- ansikt -->
+    <circle cx="100" cy="118" r="50" fill="#FFD9BF"/>
+    <!-- skjegg -->
+    <path d="M48 120 C46 170 70 206 100 206 C130 206 154 170 152 120 C140 140 124 146 100 146 C76 146 60 140 48 120 Z" fill="#fff"/>
+    <!-- bart -->
+    <path d="M100 138 C88 128 70 132 66 142 C80 146 92 144 100 138 C108 144 120 146 134 142 C130 132 112 128 100 138 Z" fill="#fff"/>
+    <!-- luekant -->
+    <rect x="34" y="84" width="132" height="24" rx="12" fill="#fff"/>
+  </g>
+  <!-- øyne, nese, kinn -->
+  <circle cx="82" cy="120" r="6" fill="#14241C"/>
+  <circle cx="118" cy="120" r="6" fill="#14241C"/>
+  <circle cx="84" cy="118" r="2" fill="#fff"/>
+  <circle cx="120" cy="118" r="2" fill="#fff"/>
+  <circle cx="68" cy="134" r="8" fill="#FF9EB5" opacity=".8"/>
+  <circle cx="132" cy="134" r="8" fill="#FF9EB5" opacity=".8"/>
+  <circle cx="100" cy="132" r="9" fill="#F2786B" stroke="#14241C" stroke-width="4"/>
+</svg>
