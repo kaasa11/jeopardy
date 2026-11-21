@@ -63,12 +63,15 @@ window.BOARD = {
     },
     {
       name: "Memes",
+      sub: "Fullfør setningen",
+      // «end» = der svaret slutter: maks 10 sekunder etter «pause», eller slutten av klippet hvis det kommer før.
+      // Lengde på klippene: 1 = 7,4 s · 2 = 12,9 s · 3 = 41,8 s · 4 = 16,3 s · 5 = 72,9 s
       clues: [
-        { q: "Hvilken hunderase er «Doge»?", a: "Shiba Inu" },
-        { q: "Fullfør: «One does not simply …»", a: "«… walk into Mordor»" },
-        { q: "Hvilken sang blir du lurt til å høre når du blir «rickrolla»?", a: "«Never Gonna Give You Up» – Rick Astley" },
-        { q: "Hva heter memen der en mann snur seg etter en annen kvinne mens kjæresten ser sjokkert på?", a: "Distracted Boyfriend" },
-        { q: "Hva het egentlig katten kjent som «Grumpy Cat»?", a: "Tardar Sauce" },
+        { q: "Fullfør setningen …", video: "video_1.mp4", start: 0, pause: 5, end: 7.4, a: "«Noice»" },
+        { q: "Fullfør setningen …", video: "video_2.mp4", start: 0, pause: 8, end: 12.9, a: "«Hit the road dude, this ain't no state property – this is private property»" },
+        { q: "Fullfør setningen …", video: "video_3.mp4", start: 0, pause: 16, end: 26, a: "«If my grandmother had wheels, she would've been a bike»" },
+        { q: "Fullfør setningen …", video: "video_4.mp4", start: 0, pause: 4, end: 14, a: "«I don't care that you broke your elbow»" },
+        { q: "Fullfør setningen …", video: "video_5.mp4", start: 0, pause: 4, end: 14, a: "«But I cannot see, I'm legally blind»" },
       ],
     },
   ],
