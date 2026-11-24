@@ -24,11 +24,11 @@ window.BOARD = {
     {
       name: "Jul",
       clues: [
-        { q: "Hva heter reinsdyret med den røde nesen?", a: "Rudolf" },
-        { q: "Hvor mange luker har en vanlig julekalender?", a: "24" },
-        { q: "Hvilken by gir hvert år juletreet som står på Trafalgar Square i London?", a: "Oslo" },
-        { q: "Hvilken tegnefilmfigur ser svenskene på klokka 15 hver julaften?", a: "Kalle Anka (Donald Duck)" },
-        { q: "Hva heter nissens kone i den amerikanske tradisjonen?", a: "Mrs. Claus" },
+        { q: "I «Tre nøtter til Askepott»: Hva finner Askepott inni de tre nøttene?", a: "Tre kjoler (jaktdrakt, ballkjole og brudekjole)" },
+        { q: "Hvor mange reinsdyr trekker julenissens slede, Rudolf ikke medregnet?", a: "8" },
+        { q: "Hva ser svenskene på klokka 15 hver julaften?", a: "Kalle Anka (Donald Duck)" },
+        { q: "I hvilket land ble julesangen «Glade jul» skrevet i 1818?", a: "Østerrike" },
+        { q: "Den hellige Nikolas, som julenissen er inspirert av, var biskop i hvilken by?", a: "Myra (i dagens Tyrkia)" },
       ],
     },
     {
