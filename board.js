@@ -19,6 +19,7 @@ window.BOARD = {
   title: "Jeopardy!",
   subtitle: "Julebordet 2026",
   doubleName: "Nisse-dobbel",
+  doubles: 3, // antall Nisse-dobler per spill (trekkes tilfeldig, aldri på 100-raden)
   values: [100, 200, 300, 400, 500],
   categories: [
     {

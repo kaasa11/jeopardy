@@ -275,10 +275,19 @@ const clueAt = (c, r) => B.categories[c]?.clues?.[r];
 const team = (id) => S.teams.find((t) => t.id === id);
 const valueOf = (o) => (B.values[o.r] || 0) * (o.dd ? 2 : 1);
 const ddName = () => B.doubleName || 'Nisse-dobbel';
-function pickDouble() { return `${Math.floor(Math.random() * cols())}-${1 + Math.floor(Math.random() * Math.max(1, rows() - 1))}`; }
+const ddCount = () => Math.max(0, Math.min(B.doubles ?? 1, cols() * Math.max(1, rows() - 1)));
+// Trekker tilfeldige Nisse-dobler: aldri på øverste rad, og helst i hver sin kategori.
+function pickDoubles() {
+  const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const cells = shuffle([...Array(cols()).keys()].flatMap((c) => [...Array(rows()).keys()].slice(rows() > 1 ? 1 : 0).map((r) => [c, r])));
+  const out = [], usedCols = new Set();
+  for (const [c, r] of cells) if (out.length < ddCount() && !usedCols.has(c)) { out.push(`${c}-${r}`); usedCols.add(c); }
+  for (const [c, r] of cells) if (out.length < ddCount() && !out.includes(`${c}-${r}`)) out.push(`${c}-${r}`);
+  return out;
+}
 function fresh(teams) {
   teams = teams || TEAM_NAMES.slice(0, 3).map((name, i) => ({ id: i + 1, name, members: [], score: 0, bezzUsed: false }));
-  return { teams, used: {}, open: null, double: pickDouble(), turn: teams[0].id, started: false, snow: S?.snow ?? true };
+  return { teams, used: {}, open: null, doubles: pickDoubles(), turn: teams[0].id, started: false, snow: S?.snow ?? true };
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} }
 function load() { try { return JSON.parse(localStorage.getItem(KEY)); } catch { return null; } }
@@ -298,7 +307,7 @@ const A = {
       for (const a of S.used[key].awards) { const t = team(a.team); if (t) t.score -= a.delta; }
       delete S.used[key]; return update();
     }
-    const dd = key === S.double;
+    const dd = S.doubles.includes(key);
     S.open = { key, c, r, dd, splash: dd, revealed: false, awards: [], bezz: [], turn: S.turn };
     if (!dd) play(S.open, 'q');
     update();
@@ -538,10 +547,12 @@ document.addEventListener('keydown', (e) => {
   document.title = `${B.title} – ${B.subtitle || ''}`;
   const [pre, post] = ddName().toUpperCase().split('-');
   $('ddTitle').innerHTML = post ? `${esc(pre)}-<br>${esc(post)}!` : `${esc(pre)}!`;
-  $('ruleDD').textContent = `🎅 ${ddName()} = dobbel verdi`;
+  $('ruleDD').textContent = `🎅 ${ddCount() > 1 ? `${ddCount()} × ` : ''}${ddName()} = dobbel verdi`;
   S = load() || fresh();
-  const [dc, dr] = String(S.double).split('-').map(Number);
-  if (!(dc < cols() && dr < rows())) S.double = pickDouble();
+  // Trekk på nytt hvis lagret spill er fra en eldre versjon, har feil antall, eller peker utenfor brettet
+  const okCell = (k) => { const [c, r] = String(k).split('-').map(Number); return c < cols() && r < rows(); };
+  if (!Array.isArray(S.doubles) || S.doubles.length !== ddCount() || !S.doubles.every(okCell)) S.doubles = pickDoubles();
+  delete S.double;
   if (S.open && !clueAt(S.open.c, S.open.r)) S.open = null;
   // Forhåndslast bildene
   for (const cat of B.categories) for (const c of cat.clues) for (const k of ['img', 'aImg']) if (c[k]) new Image().src = `img/${encodeURIComponent(c[k])}`;
