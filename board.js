@@ -54,9 +54,9 @@ window.BOARD = {
     {
       name: "Steder",
       clues: [
-        { q: "Hvor er dette?", img: "sted_1.PNG", a: "Nyhavn, København" },
+        { q: "Hvor er dette?", img: "sted_1.PNG", a: "København" },
         { q: "Hvor er dette?", img: "sted_2.PNG", a: "Praha" },
-        { q: "Hvor er dette?", img: "sted_3.PNG", a: "Helsingfors (Helsinki)" },
+        { q: "Hvor er dette?", img: "sted_3.PNG", a: "Helsinki" },
         { q: "Hvor er dette?", img: "sted_4.PNG", a: "Alicante" },
         { q: "Hvor er dette?", img: "sted_5.PNG", a: "Cardiff" },
       ],
