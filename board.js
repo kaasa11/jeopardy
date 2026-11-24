@@ -34,11 +34,11 @@ window.BOARD = {
     {
       name: "Sport",
       clues: [
-        { q: "Hvor mange spillere har hvert lag på banen i fotball?", a: "11" },
-        { q: "Hvilken idrett driver Jakob Ingebrigtsen med?", a: "Friidrett (løping)" },
-        { q: "Hvilket år arrangerte Lillehammer vinter-OL?", a: "1994" },
-        { q: "Hvor langt er et maraton?", a: "42,195 km" },
-        { q: "Hvilket land har vunnet flest gullmedaljer i vinter-OL totalt?", a: "Norge" },
+        { q: "Hvor mange golfspillere fra Norge spilte på PGA Tour i 2026?", a: "3 (Hovland, Reitan og Ventura)" },
+        { q: "Hvor mange OL-gull har Petter Northug?", a: "2" },
+        { q: "Hvem har draktnummer 22 på det norske herrelandslaget i fotball?", a: "Oscar Bobb" },
+        { q: "Ingrid Kristiansen har norgesrekorden for kvinner i maraton. Hva er tiden?", a: "2:21:06" },
+        { q: "Hvor mange seiere har IK Start i Eliteserien 2026 så langt?", a: "6" },
       ],
     },
     {
