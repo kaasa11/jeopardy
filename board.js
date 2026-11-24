@@ -44,21 +44,21 @@ window.BOARD = {
     {
       name: "Film",
       clues: [
-        { q: "Hva heter gutten som blir glemt hjemme alene i julen?", a: "Kevin (McCallister)" },
-        { q: "Hva heter den grønne skapningen som stjal julen?", a: "Grinchen" },
-        { q: "Hvilken film med en hest, en ugle og tre nøtter vises på NRK hver julaften?", a: "Tre nøtter til Askepott" },
-        { q: "Hvem spiller Buddy i filmen «Elf»?", a: "Will Ferrell" },
-        { q: "Hvilken jobb har Hugh Grants rollefigur i «Love Actually»?", a: "Statsminister" },
+        { q: "Hva heter hovedskurken i «Batman Begins» (2005)?", a: "Ra's al Ghul" },
+        { q: "Hvem spiller hovedrollen som Thor Heyerdahl i filmen «Kon-Tiki» (2012)?", a: "Pål Sverre Valheim Hagen" },
+        { q: "Phil Collins lagde sangene i Disney-filmen «Tarzan». Hvilke språk sang han dem på?", a: "Engelsk, spansk, fransk, tysk og italiensk" },
+        { q: "I «Ringenes Herre»-trilogien møter vi hobbitene, som blant annet er kjent for sang og musikk. Hvor mange ganger ser vi hobbiter synge i filmene?", a: "3 (Bilbo, Merry & Pippin, Pippin)" },
+        { q: "Den første «Fast & Furious»-filmen kom i 2001, og siden har det kommet totalt 10 filmer. Nevn minst 2 av regissørene bak filmene.", a: "Rob Cohen, John Singleton, Justin Lin, F. Gary Gray, Louis Leterrier" },
       ],
     },
     {
       name: "Steder",
       clues: [
-        { q: "I hvilken finsk by bor julenissen, ifølge finnene?", a: "Rovaniemi" },
-        { q: "Hvilken norsk by lager verdens største pepperkakeby?", a: "Bergen" },
-        { q: "Hva er Norges nordligste punkt på fastlandet?", a: "Kinnarodden (ikke Nordkapp!)" },
-        { q: "Hvor er dette? (eksempel på bildespørsmål – bytt ut bildet)", img: "eksempel.svg", a: "Nordpolen" },
-        { q: "Hvilket land har flest innbyggere i verden?", a: "India" },
+        { q: "Hvor er dette?", img: "sted_1.PNG", a: "Nyhavn, København" },
+        { q: "Hvor er dette?", img: "sted_2.PNG", a: "Praha" },
+        { q: "Hvor er dette?", img: "sted_3.PNG", a: "Helsingfors (Helsinki)" },
+        { q: "Hvor er dette?", img: "sted_4.PNG", a: "Alicante" },
+        { q: "Hvor er dette?", img: "sted_5.PNG", a: "Cardiff" },
       ],
     },
     {
